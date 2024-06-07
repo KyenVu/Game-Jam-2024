@@ -27,7 +27,7 @@ public class RandomSpawner : MonoBehaviour
     {
         Vector2 ranPosition2D = Random.insideUnitCircle * radius;
         float randomY = Random.Range(minY, maxY); // Generate a random y-coordinate within the specified range
-        Vector3 ranPosition = new Vector3(ranPosition2D.x, randomY, ranPosition2D.y) + new Vector3(transform.position.x, 0f, transform.position.z);
+        Vector3 ranPosition = new Vector3(ranPosition2D.x, randomY, ranPosition2D.y) + new Vector3(transform.position.x, transform.position.y, transform.position.z);
         Instantiate(ItemPrefab, ranPosition, Quaternion.identity);
         Debug.Log($"Random Spawn Position: {ranPosition}");
     }

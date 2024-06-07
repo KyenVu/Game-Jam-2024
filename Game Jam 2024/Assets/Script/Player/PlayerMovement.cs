@@ -4,9 +4,11 @@ using UnityEngine;
 
 public class PlayerMovement : MonoBehaviour
 {
+
     private Rigidbody2D m_rigidbody;
     private Vector2 position;
     public float speed;
+
     // Start is called before the first frame update
     void Start()
     {
@@ -23,7 +25,6 @@ public class PlayerMovement : MonoBehaviour
     }
     private void FixedUpdate()
     {
-        
         m_rigidbody.velocity = position * speed;
     }
 }

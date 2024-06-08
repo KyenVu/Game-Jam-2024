@@ -19,6 +19,7 @@ public class LevelMoveRef : MonoBehaviour
 
         if (other.tag == "Player")
         {
+            Debug.Log("Trigger Entered");
             SceneManager.LoadScene(sceneBuildIndex, LoadSceneMode.Single);
         }
     }

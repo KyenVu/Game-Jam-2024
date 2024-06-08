@@ -57,6 +57,7 @@ GameObject:
   - component: {fileID: 7345049966067305773}
   - component: {fileID: 4314821459706075287}
   - component: {fileID: 4950516560541969853}
+  - component: {fileID: 8597780351690202833}
   m_Layer: 0
   m_Name: Dcm
   m_TagString: Player
@@ -166,6 +167,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   speed: 5
+--- !u!61 &8597780351690202833
 BoxCollider2D:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}

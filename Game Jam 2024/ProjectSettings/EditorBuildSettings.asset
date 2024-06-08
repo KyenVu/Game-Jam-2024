@@ -32,4 +32,7 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scenes/_Sanitation.unity
     guid: 48f73f32088160e4881356bf6911e502
+  - enabled: 1
+    path: Assets/Scenes/CookingMiniGame.unity
+    guid: d71f2f6da15274d41ae81b83d4b158a3
   m_configObjects: {}

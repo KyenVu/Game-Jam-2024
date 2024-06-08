@@ -6,6 +6,7 @@ using UnityEngine.UI;
 
 public class CookingMiniGame : MonoBehaviour
 {
+    private bool isCompleted;
     public Button[] ingredientButtons; // Buttons for selecting ingredients
     public GameObject burgerImageObject; // Object to display the burger image
     public TextMeshProUGUI feedbackText; // Feedback text to show if the dish is correct or wrong
@@ -87,7 +88,9 @@ public class CookingMiniGame : MonoBehaviour
                 }
                 else
                 {
+                    //Win
                     feedbackText.text = "All recipes completed!";
+                    isCompleted = true;
                     burgerImageObject.SetActive(false); // Hide the burger image
                 }
             }

@@ -8,20 +8,25 @@ public class RandomSpawner : MonoBehaviour
     public float radius = 1f;
     public float minY = 0f; // Minimum y value for random range
     public float maxY = 1f; // Maximum y value for random range
-
+    public float minSpawnInterval = 1f; // Minimum interval in seconds between spawns
+    public float maxSpawnInterval = 5f; // Maximum interval in seconds between spawns
     void Start()
     {
-        // Optional: You can call SpawnObjectAtRandomPosition here if you want to spawn an item at start.
-        // SpawnObjectAtRandomPosition();
+        // Start the coroutine to spawn objects
+        StartCoroutine(SpawnObjects());
     }
 
-    void Update()
+    IEnumerator SpawnObjects()
     {
-        if (Input.GetKeyDown(KeyCode.Space))
+        while (true)
         {
             SpawnObjectAtRandomPosition();
+            // Generate a random interval between minSpawnInterval and maxSpawnInterval
+            float spawnInterval = Random.Range(minSpawnInterval, maxSpawnInterval);
+            yield return new WaitForSeconds(spawnInterval);
         }
     }
+
 
     void SpawnObjectAtRandomPosition()
     {

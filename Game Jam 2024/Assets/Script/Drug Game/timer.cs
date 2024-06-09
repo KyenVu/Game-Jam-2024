@@ -17,7 +17,7 @@ public class timer : MonoBehaviour
         if(remainingTime < 0) 
         { 
             remainingTime = 0;
-            SceneManager.LoadScene(9, LoadSceneMode.Single);
+            SceneManager.LoadScene(1, LoadSceneMode.Single);
 
         }
         

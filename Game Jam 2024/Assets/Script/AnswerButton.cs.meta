@@ -1,5 +1,9 @@
 fileFormatVersion: 2
-guid: 72113987bbb79bb49bde1913fe031f93
+<<<<<<< Updated upstream:Game Jam 2024/Assets/GameState.cs.meta
+guid: 04b8c4857fe726844843114e18125b02
+=======
+guid: 878e90d38ef251f41b7abb13df2195bf
+>>>>>>> Stashed changes:Game Jam 2024/Assets/Script/Drug Game/AutoDestroy.cs.meta
 MonoImporter:
   externalObjects: {}
   serializedVersion: 2

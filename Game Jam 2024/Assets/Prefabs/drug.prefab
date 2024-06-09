@@ -12,7 +12,6 @@ GameObject:
   - component: {fileID: 5693099563155923593}
   - component: {fileID: 5693099563155923599}
   - component: {fileID: 5693099563155923596}
-  - component: {fileID: 7809304152057131484}
   m_Layer: 0
   m_Name: drug
   m_TagString: drug
@@ -134,16 +133,3 @@ BoxCollider2D:
   serializedVersion: 2
   m_Size: {x: 1, y: 1}
   m_EdgeRadius: 0
---- !u!114 &7809304152057131484
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 5693099563155923592}
-  m_Enabled: 0
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: e137e273750cc564784eea704fc95a8d, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  delay: 10

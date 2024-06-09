@@ -53,7 +53,7 @@ public class CookingMiniGame : MonoBehaviour
             {
                 isTimerRunning = false;
                 feedbackText.text = "Time's up! Try again!";
-                SceneManager.LoadScene(3, LoadSceneMode.Single);
+                SceneManager.LoadScene(4, LoadSceneMode.Single);
                 // Add any additional logic for when time runs out
             }
         }
@@ -104,7 +104,7 @@ public class CookingMiniGame : MonoBehaviour
                     isCompleted = true;
                     burgerImageObject.SetActive(false); // Hide the burger image
                     isTimerRunning = false; // Stop the timer since all recipes are completed
-                    SceneManager.LoadScene(7, LoadSceneMode.Single);
+                    SceneManager.LoadScene(8, LoadSceneMode.Single);
                 }
             }
             else

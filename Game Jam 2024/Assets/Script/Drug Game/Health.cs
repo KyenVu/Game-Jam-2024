@@ -65,7 +65,7 @@ public class Health : MonoBehaviour
         {
 
             Debug.Log("Progress bar is full!");
-            SceneManager.LoadScene(5, LoadSceneMode.Single);
+            SceneManager.LoadScene(6, LoadSceneMode.Single);
         }
     }
 
@@ -74,7 +74,7 @@ public class Health : MonoBehaviour
     {
         if(CurrentHealth <= 0)
         {
-            SceneManager.LoadScene(1, LoadSceneMode.Single);
+            SceneManager.LoadScene(2, LoadSceneMode.Single);
         }
     }
 }

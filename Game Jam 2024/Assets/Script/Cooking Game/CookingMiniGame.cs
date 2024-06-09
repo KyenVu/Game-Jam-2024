@@ -3,9 +3,10 @@ using System.Collections.Generic;
 using TMPro;
 using UnityEngine;
 using UnityEngine.UI;
-
+using UnityEngine.SceneManagement;
 public class CookingMiniGame : MonoBehaviour
 {
+    private bool isCompleted;
     public Button[] ingredientButtons; // Buttons for selecting ingredients
     public GameObject burgerImageObject; // Object to display the burger image
     public TextMeshProUGUI feedbackText; // Feedback text to show if the dish is correct or wrong
@@ -48,10 +49,11 @@ public class CookingMiniGame : MonoBehaviour
             currentTime -= Time.deltaTime;
             timerSlider.SetTime(currentTime);
 
-            if (currentTime <= 0)
+            if (currentTime <= 0 && isCompleted == false)
             {
                 isTimerRunning = false;
                 feedbackText.text = "Time's up! Try again!";
+                SceneManager.LoadScene(3, LoadSceneMode.Single);
                 // Add any additional logic for when time runs out
             }
         }
@@ -97,9 +99,12 @@ public class CookingMiniGame : MonoBehaviour
                 }
                 else
                 {
+                    //Win
                     feedbackText.text = "All recipes completed!";
+                    isCompleted = true;
                     burgerImageObject.SetActive(false); // Hide the burger image
                     isTimerRunning = false; // Stop the timer since all recipes are completed
+                    SceneManager.LoadScene(7, LoadSceneMode.Single);
                 }
             }
             else
@@ -139,7 +144,7 @@ public class CookingMiniGame : MonoBehaviour
 
     IEnumerator FlashButtonCoroutine(Button button, Color color)
     {
-        Color originalColor = button.image.color;
+        Color originalColor = Color.white;
         button.image.color = color;
         yield return new WaitForSeconds(0.5f);
         button.image.color = originalColor;

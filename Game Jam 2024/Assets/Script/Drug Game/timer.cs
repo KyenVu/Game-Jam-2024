@@ -3,6 +3,7 @@ using System.Collections;
 using System.Collections.Generic;
 using TMPro;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 using UnityEngine.UI;
 
 public class timer : MonoBehaviour
@@ -15,8 +16,8 @@ public class timer : MonoBehaviour
         if(remainingTime > 0) { remainingTime -= Time.deltaTime; }
         if(remainingTime < 0) 
         { 
-            remainingTime = 0; 
-            isCompleted = true;
+            remainingTime = 0;
+            SceneManager.LoadScene(9, LoadSceneMode.Single);
 
         }
         

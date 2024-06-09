@@ -9,8 +9,8 @@ EditorBuildSettings:
     path: Assets/Scenes/Center.unity
     guid: 2cda990e2423bbf4892e6590ba056729
   - enabled: 1
-    path: Assets/Scenes/Communities.unity
-    guid: e2ac3da11d53406418276838c6fa8a66
+    path: Assets/Scenes/Community.unity
+    guid: bd42ebb5c90eb644898438a87fb6bb79
   - enabled: 1
     path: Assets/Scenes/Education.unity
     guid: 341924789dc15974ea6f84ddb6f8fbe2
@@ -21,7 +21,6 @@ EditorBuildSettings:
     path: Assets/Scenes/Sanitation.unity
     guid: 25b21d7651814734ebb675d8e2e5efb0
   - enabled: 1
-<<<<<<< HEAD
     path: Assets/Scenes/_Communities.unity
     guid: 92fbc57a17461694e967ba40786dc490
   - enabled: 1
@@ -36,8 +35,7 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scenes/CookingMiniGame.unity
     guid: d71f2f6da15274d41ae81b83d4b158a3
-=======
-    path: Assets/Scenes/BaseLevel.unity
-    guid: 1f5e1fae39fb06741a31e45a37d7c5f4
->>>>>>> but'
+  - enabled: 1
+    path: Assets/Scenes/Drug.unity
+    guid: 3ea5d5e922ceb37408fd4103cbbcec5a
   m_configObjects: {}

@@ -4,12 +4,18 @@ using UnityEngine;
 
 public class RandomSpawner : MonoBehaviour
 {
-    public GameObject ItemPrefab;
+    public GameObject[] itemPrefabs; // Array of prefabs to randomly choose from
     public float radius = 1f;
     public float minY = 0f; // Minimum y value for random range
     public float maxY = 1f; // Maximum y value for random range
     public float minSpawnInterval = 1f; // Minimum interval in seconds between spawns
     public float maxSpawnInterval = 5f; // Maximum interval in seconds between spawns
+
+    public int maxSpawnCount = 0; // Maximum number of items to spawn, 0 for unlimited
+
+    private int currentSpawnCount = 0;
+    private bool maxSpawnReached = false;
+
     void Start()
     {
         // Start the coroutine to spawn objects
@@ -20,6 +26,10 @@ public class RandomSpawner : MonoBehaviour
     {
         while (true)
         {
+            if (maxSpawnReached)
+            {
+                yield break; // Exit the coroutine if the max spawn count has been reached
+            }
             SpawnObjectAtRandomPosition();
             // Generate a random interval between minSpawnInterval and maxSpawnInterval
             float spawnInterval = Random.Range(minSpawnInterval, maxSpawnInterval);
@@ -27,14 +37,25 @@ public class RandomSpawner : MonoBehaviour
         }
     }
 
-
     void SpawnObjectAtRandomPosition()
     {
+        if (maxSpawnCount > 0 && currentSpawnCount >= maxSpawnCount)
+        {
+            maxSpawnReached = true;
+            Debug.Log("Max spawn count reached!");
+            return;
+        }
+
         Vector2 ranPosition2D = Random.insideUnitCircle * radius;
         float randomY = Random.Range(minY, maxY); // Generate a random y-coordinate within the specified range
         Vector3 ranPosition = new Vector3(ranPosition2D.x, randomY, ranPosition2D.y) + new Vector3(transform.position.x, transform.position.y, transform.position.z);
-        Instantiate(ItemPrefab, ranPosition, Quaternion.identity);
-        Debug.Log($"Random Spawn Position: {ranPosition}");
+
+        // Choose a random prefab from the array
+        GameObject randomPrefab = itemPrefabs[Random.Range(0, itemPrefabs.Length)];
+        Instantiate(randomPrefab, ranPosition, Quaternion.identity);
+
+        currentSpawnCount++; // Increment the current spawn count
+        Debug.Log($"Random Spawn Position: {ranPosition}, Current Spawn Count: {currentSpawnCount}");
     }
 
     private void OnDrawGizmos()

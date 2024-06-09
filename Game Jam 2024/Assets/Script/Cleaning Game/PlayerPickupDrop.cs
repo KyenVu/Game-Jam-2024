@@ -1,3 +1,4 @@
+using TMPro;
 using UnityEngine;
 using UnityEngine.UI; 
 
@@ -6,9 +7,10 @@ public class PlayerPickupDrop : MonoBehaviour
     public Transform holdPoint; // Point where the picked object will be held
     private GameObject heldObject;
     public Vector2 dropOffset = new Vector2(0, -1); // Offset to drop the object slightly below the player
-    public Text trashCounterText; // UI text element to show the remaining trash count
+    public TMP_Text trashCounterText; // UI text element to show the remaining trash count
 
-    private int trashCount;
+    private int trashCount = 20;
+
 
     void Start()
     {
@@ -45,11 +47,6 @@ public class PlayerPickupDrop : MonoBehaviour
         heldObject = obj;
         obj.transform.position = holdPoint.position;
         obj.transform.SetParent(holdPoint);
-        var rb = obj.GetComponent<Rigidbody2D>();
-        if (rb != null)
-        {
-            rb.isKinematic = true; // Disable physics interactions while holding
-        }
     }
 
     void DropObject()
@@ -66,27 +63,20 @@ public class PlayerPickupDrop : MonoBehaviour
             // Drop the object at player's position plus offset
             heldObject.transform.position = (Vector2)transform.position + dropOffset;
 
-            // Check if the drop location is within the trash bin
-            Collider2D[] colliders = Physics2D.OverlapCircleAll(heldObject.transform.position, 0.5f);
-            foreach (Collider2D collider in colliders)
-            {
-                if (collider.CompareTag("TrashBin")) // Assuming the trash bin has a "TrashBin" tag
-                {
-                    Destroy(heldObject); // Destroy the trash object
-                    heldObject = null;
-                    trashCount--; // Decrease the trash count
-                    UpdateTrashCount(); // Update the UI
-                    return;
-                }
-            }
-
-            // Set the Rigidbody2D back to kinematic after setting the position
-            if (rb != null)
-            {
-                rb.isKinematic = true; // Prevent physics interactions after dropping
-            }
+        
 
             heldObject = null;
+        }
+    }
+
+    private void OnTriggerEnter2D(Collider2D collider)
+    {
+        if (heldObject != null && collider.CompareTag("TrashBin")) // Assuming the trash bin has a "TrashBin" tag
+        {
+            Destroy(heldObject); // Destroy the trash object
+            heldObject = null;
+            trashCount--; // Decrease the trash count
+            UpdateTrashCount(); // Update the UI
         }
     }
 

@@ -41,4 +41,7 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scenes/Teaching.unity
     guid: d6ca07252edfbcf43aa9e65e7d4bc08b
+  - enabled: 1
+    path: Assets/Scenes/Trash.unity
+    guid: 42fd74083eddeaa449aefd32f73cade8
   m_configObjects: {}

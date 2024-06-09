@@ -6,7 +6,7 @@ using System.Collections.Generic;
 public class DialogueManager : MonoBehaviour
 {
     [Header("UI Elements")]
-    public GameObject dialogueBox;
+ 
     public TextMeshProUGUI dialogueText;
 
     [Header("Typing Effect")]
@@ -15,18 +15,17 @@ public class DialogueManager : MonoBehaviour
 
     private Queue<string> sentences;
     private bool isTyping;
-    private PlayerMovement playerMovement;
+ 
 
     private void Start()
     {
         sentences = new Queue<string>();
-        dialogueBox.SetActive(false);
-        playerMovement = FindObjectOfType<PlayerMovement>();
+
     }
 
     public void StartDialogue(Dialogue dialogue)
     {
-        dialogueBox.SetActive(true);
+
         sentences.Clear();
 
         foreach (string sentence in dialogue.sentences)
@@ -73,7 +72,7 @@ public class DialogueManager : MonoBehaviour
     {
         yield return new WaitForSeconds(autoNextDelay);
 
-        if (!isTyping && dialogueBox.activeSelf)
+        if (!isTyping)
         {
             DisplayNextSentence();
         }
@@ -81,13 +80,13 @@ public class DialogueManager : MonoBehaviour
 
     private void EndDialogue()
     {
-        dialogueBox.SetActive(false);
+        
         
     }
 
     private void Update()
     {
-        if (Input.GetKeyDown(KeyCode.E) && !isTyping && dialogueBox.activeSelf)
+        if (Input.GetKeyDown(KeyCode.E) && !isTyping)
         {
             StopCoroutine(AutoAdvanceSentence());  // Stop the auto-advance coroutine
             DisplayNextSentence();

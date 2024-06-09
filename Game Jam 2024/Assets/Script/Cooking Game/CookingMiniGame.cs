@@ -142,7 +142,7 @@ public class CookingMiniGame : MonoBehaviour
 
     IEnumerator FlashButtonCoroutine(Button button, Color color)
     {
-        Color originalColor = button.image.color;
+        Color originalColor = Color.white;
         button.image.color = color;
         yield return new WaitForSeconds(0.5f);
         button.image.color = originalColor;

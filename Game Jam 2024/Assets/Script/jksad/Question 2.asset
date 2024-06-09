@@ -9,9 +9,13 @@ MonoBehaviour:
   m_GameObject: {fileID: 0}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 1f99a95811b804d4383163e5d6c48f9b, type: 3}
-  m_Name: Question_0
+  m_Script: {fileID: 11500000, guid: d5e7d8750fc151045aa56b4b3e42fbe6, type: 3}
+  m_Name: Question 2
   m_EditorClassIdentifier: 
-  questionData: 
+  questionData: Which is a mammal animal
   category: 
-  answers: []
+  answers:
+  - Lion
+  - Chicken
+  - Ant
+  - Crocodile

@@ -15,7 +15,7 @@ public class Setup : MonoBehaviour
     [SerializeField]
     private TextMeshProUGUI categoryText;
     [SerializeField]
-    private AnswerButton[] answerButtons;
+    private Answer[] answerButtons;
     [SerializeField]
     private int correctAnswerChoice;
     private int currentQuestionID;
@@ -95,7 +95,7 @@ public class Setup : MonoBehaviour
             currentQuestionID++;
             if (currentQuestionID >= 5)
             {
-                SceneManager.LoadScene("BaseLevel"); // thay vao day
+                SceneManager.LoadScene("_Education"); // thay vao day
             }
 
             // lam` gi co,anh xoa roi ma`
@@ -109,7 +109,7 @@ public class Setup : MonoBehaviour
         }
         else
         {
-            SceneManager.LoadScene("Education");
+            SceneManager.LoadScene("Teaching");
         }
     }
 

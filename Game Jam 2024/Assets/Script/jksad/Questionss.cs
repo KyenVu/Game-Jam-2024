@@ -5,7 +5,7 @@ using TMPro;
 using System;
 
 [CreateAssetMenu(fileName = "Question", menuName = "Objects/Question", order = 1)]
-public class Questionsss : ScriptableObject
+public class Questionss : ScriptableObject
 {
     public string questionData;
     public string category;

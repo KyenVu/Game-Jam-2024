@@ -24,7 +24,7 @@ EditorBuildSettings:
     path: Assets/Scenes/_Communities.unity
     guid: 92fbc57a17461694e967ba40786dc490
   - enabled: 1
-    path: Assets/Scenes/_Education 1.unity
+    path: Assets/Scenes/_Education.unity
     guid: c585d63c215eb234bbc4dfe294db966f
   - enabled: 1
     path: Assets/Scenes/_Hunger.unity
@@ -38,4 +38,7 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scenes/Drug.unity
     guid: 3ea5d5e922ceb37408fd4103cbbcec5a
+  - enabled: 1
+    path: Assets/Scenes/Teaching.unity
+    guid: d6ca07252edfbcf43aa9e65e7d4bc08b
   m_configObjects: {}

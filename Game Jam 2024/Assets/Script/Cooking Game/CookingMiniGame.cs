@@ -23,6 +23,7 @@ public class CookingMiniGame : MonoBehaviour
     private int currentRecipeIndex = 0;
     private float currentTime; // Current time left
     public float timeLimit = 30f; // Time limit for each recipe
+    private bool isTimerRunning = true; // Flag to control timer
 
     void Start()
     {
@@ -41,19 +42,28 @@ public class CookingMiniGame : MonoBehaviour
 
     void Update()
     {
-        // Update the timer
-        currentTime -= Time.deltaTime;
-        timerSlider.SetTime(currentTime);
-
-        if (currentTime <= 0)
+        if (isTimerRunning)
         {
-            feedbackText.text = "Time's up! Try again!";
-            ResetCurrentRecipe();
+            // Update the timer
+            currentTime -= Time.deltaTime;
+            timerSlider.SetTime(currentTime);
+
+            if (currentTime <= 0)
+            {
+                isTimerRunning = false;
+                feedbackText.text = "Time's up! Try again!";
+                // Add any additional logic for when time runs out
+            }
         }
     }
 
     void OnIngredientSelected(Button button)
     {
+        if (!isTimerRunning)
+        {
+            return; // Ignore input if the timer is not running
+        }
+
         string ingredient = button.name;
         currentInput += ingredient;
 
@@ -89,6 +99,7 @@ public class CookingMiniGame : MonoBehaviour
                 {
                     feedbackText.text = "All recipes completed!";
                     burgerImageObject.SetActive(false); // Hide the burger image
+                    isTimerRunning = false; // Stop the timer since all recipes are completed
                 }
             }
             else
@@ -118,13 +129,7 @@ public class CookingMiniGame : MonoBehaviour
     {
         currentTime = timeLimit;
         timerSlider.SetMaxTime(timeLimit);
-    }
-
-    void ResetCurrentRecipe()
-    {
-        currentInput = "";
-        ResetTimer();
-        DisplayBurgerImage();
+        isTimerRunning = true;
     }
 
     void FlashButton(Button button, Color color)
@@ -134,7 +139,7 @@ public class CookingMiniGame : MonoBehaviour
 
     IEnumerator FlashButtonCoroutine(Button button, Color color)
     {
-        Color originalColor = Color.white;
+        Color originalColor = button.image.color;
         button.image.color = color;
         yield return new WaitForSeconds(0.5f);
         button.image.color = originalColor;

@@ -4,40 +4,5 @@
 EditorBuildSettings:
   m_ObjectHideFlags: 0
   serializedVersion: 2
-  m_Scenes:
-  - enabled: 1
-    path: Assets/Scenes/Center.unity
-    guid: 2cda990e2423bbf4892e6590ba056729
-  - enabled: 1
-    path: Assets/Scenes/Communities.unity
-    guid: e2ac3da11d53406418276838c6fa8a66
-  - enabled: 1
-    path: Assets/Scenes/Education.unity
-    guid: 341924789dc15974ea6f84ddb6f8fbe2
-  - enabled: 1
-    path: Assets/Scenes/Hunger.unity
-    guid: 9d49945fef5d37c4ea73fd2672f24b2d
-  - enabled: 1
-    path: Assets/Scenes/Sanitation.unity
-    guid: 25b21d7651814734ebb675d8e2e5efb0
-  - enabled: 1
-<<<<<<< HEAD
-    path: Assets/Scenes/_Communities.unity
-    guid: 92fbc57a17461694e967ba40786dc490
-  - enabled: 1
-    path: Assets/Scenes/_Education 1.unity
-    guid: c585d63c215eb234bbc4dfe294db966f
-  - enabled: 1
-    path: Assets/Scenes/_Hunger.unity
-    guid: bbda0c276b3e670499912c90bf733c4c
-  - enabled: 1
-    path: Assets/Scenes/_Sanitation.unity
-    guid: 48f73f32088160e4881356bf6911e502
-  - enabled: 1
-    path: Assets/Scenes/CookingMiniGame.unity
-    guid: d71f2f6da15274d41ae81b83d4b158a3
-=======
-    path: Assets/Scenes/BaseLevel.unity
-    guid: 1f5e1fae39fb06741a31e45a37d7c5f4
->>>>>>> but'
+  m_Scenes: []
   m_configObjects: {}

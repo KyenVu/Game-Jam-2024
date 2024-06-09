@@ -283,6 +283,93 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 4
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 90}
+--- !u!1001 &127895091
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    serializedVersion: 2
+    m_TransformParent: {fileID: 0}
+    m_Modifications:
+    - target: {fileID: 7391229265286992440, guid: 0fa002016df1d5940a46c772651e7e64, type: 3}
+      propertyPath: maxY
+      value: 5
+      objectReference: {fileID: 0}
+    - target: {fileID: 7391229265286992440, guid: 0fa002016df1d5940a46c772651e7e64, type: 3}
+      propertyPath: minY
+      value: -5
+      objectReference: {fileID: 0}
+    - target: {fileID: 7391229265286992440, guid: 0fa002016df1d5940a46c772651e7e64, type: 3}
+      propertyPath: radius
+      value: 4.89
+      objectReference: {fileID: 0}
+    - target: {fileID: 7391229265286992440, guid: 0fa002016df1d5940a46c772651e7e64, type: 3}
+      propertyPath: ItemPrefab
+      value: 
+      objectReference: {fileID: 5116731133917624968, guid: c2c744460881a4b4bb51fe0a405ace43, type: 3}
+    - target: {fileID: 7391229265286992440, guid: 0fa002016df1d5940a46c772651e7e64, type: 3}
+      propertyPath: maxSpawnCount
+      value: 10
+      objectReference: {fileID: 0}
+    - target: {fileID: 7391229265286992440, guid: 0fa002016df1d5940a46c772651e7e64, type: 3}
+      propertyPath: itemPrefabs.Array.size
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 7391229265286992440, guid: 0fa002016df1d5940a46c772651e7e64, type: 3}
+      propertyPath: itemPrefabs.Array.data[0]
+      value: 
+      objectReference: {fileID: 5116731133917624968, guid: c2c744460881a4b4bb51fe0a405ace43, type: 3}
+    - target: {fileID: 7391229265286992441, guid: 0fa002016df1d5940a46c772651e7e64, type: 3}
+      propertyPath: m_Name
+      value: Spawner (1)
+      objectReference: {fileID: 0}
+    - target: {fileID: 7391229265286992443, guid: 0fa002016df1d5940a46c772651e7e64, type: 3}
+      propertyPath: m_RootOrder
+      value: 9
+      objectReference: {fileID: 0}
+    - target: {fileID: 7391229265286992443, guid: 0fa002016df1d5940a46c772651e7e64, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 4.52
+      objectReference: {fileID: 0}
+    - target: {fileID: 7391229265286992443, guid: 0fa002016df1d5940a46c772651e7e64, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 0.07
+      objectReference: {fileID: 0}
+    - target: {fileID: 7391229265286992443, guid: 0fa002016df1d5940a46c772651e7e64, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7391229265286992443, guid: 0fa002016df1d5940a46c772651e7e64, type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 7391229265286992443, guid: 0fa002016df1d5940a46c772651e7e64, type: 3}
+      propertyPath: m_LocalRotation.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7391229265286992443, guid: 0fa002016df1d5940a46c772651e7e64, type: 3}
+      propertyPath: m_LocalRotation.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7391229265286992443, guid: 0fa002016df1d5940a46c772651e7e64, type: 3}
+      propertyPath: m_LocalRotation.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7391229265286992443, guid: 0fa002016df1d5940a46c772651e7e64, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7391229265286992443, guid: 0fa002016df1d5940a46c772651e7e64, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7391229265286992443, guid: 0fa002016df1d5940a46c772651e7e64, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+    m_AddedGameObjects: []
+  m_SourcePrefab: {fileID: 100100000, guid: 0fa002016df1d5940a46c772651e7e64, type: 3}
 --- !u!1 &222443043
 GameObject:
   m_ObjectHideFlags: 0
@@ -774,18 +861,30 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 7391229265286992440, guid: 0fa002016df1d5940a46c772651e7e64, type: 3}
       propertyPath: maxY
-      value: 9
+      value: 5
       objectReference: {fileID: 0}
     - target: {fileID: 7391229265286992440, guid: 0fa002016df1d5940a46c772651e7e64, type: 3}
       propertyPath: minY
-      value: -9
+      value: -5
       objectReference: {fileID: 0}
     - target: {fileID: 7391229265286992440, guid: 0fa002016df1d5940a46c772651e7e64, type: 3}
       propertyPath: radius
-      value: 9.65
+      value: 4.89
       objectReference: {fileID: 0}
     - target: {fileID: 7391229265286992440, guid: 0fa002016df1d5940a46c772651e7e64, type: 3}
       propertyPath: ItemPrefab
+      value: 
+      objectReference: {fileID: 5116731133917624968, guid: c2c744460881a4b4bb51fe0a405ace43, type: 3}
+    - target: {fileID: 7391229265286992440, guid: 0fa002016df1d5940a46c772651e7e64, type: 3}
+      propertyPath: maxSpawnCount
+      value: 10
+      objectReference: {fileID: 0}
+    - target: {fileID: 7391229265286992440, guid: 0fa002016df1d5940a46c772651e7e64, type: 3}
+      propertyPath: itemPrefabs.Array.size
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 7391229265286992440, guid: 0fa002016df1d5940a46c772651e7e64, type: 3}
+      propertyPath: itemPrefabs.Array.data[0]
       value: 
       objectReference: {fileID: 5116731133917624968, guid: c2c744460881a4b4bb51fe0a405ace43, type: 3}
     - target: {fileID: 7391229265286992441, guid: 0fa002016df1d5940a46c772651e7e64, type: 3}
@@ -798,7 +897,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 7391229265286992443, guid: 0fa002016df1d5940a46c772651e7e64, type: 3}
       propertyPath: m_LocalPosition.x
-      value: 0.07
+      value: -4.56
       objectReference: {fileID: 0}
     - target: {fileID: 7391229265286992443, guid: 0fa002016df1d5940a46c772651e7e64, type: 3}
       propertyPath: m_LocalPosition.y

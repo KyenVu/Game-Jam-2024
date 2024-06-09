@@ -1,0 +1,83 @@
+npc.png
+size:2048,256
+filter:Linear,Linear
+pma:true
+2
+bounds:408,55,201,199
+offsets:1,1,203,201
+2 copy
+bounds:205,55,201,199
+offsets:1,1,203,201
+2 copy 2
+bounds:2,55,201,199
+offsets:1,1,203,201
+3 copy
+bounds:1685,148,92,106
+offsets:1,1,94,108
+3 copy 2
+bounds:1497,148,92,106
+offsets:1,1,94,108
+3 copy 3
+bounds:1591,148,92,106
+offsets:1,1,94,108
+Layer 10
+bounds:1133,44,58,46
+offsets:1,1,60,48
+Layer 11
+bounds:1426,97,54,47
+offsets:1,1,56,49
+Layer 8
+bounds:1026,2,88,105
+offsets:1,1,91,107
+rotate:90
+Layer 8 copy
+bounds:919,2,88,105
+offsets:1,1,91,107
+rotate:90
+Layer 8 copy 2
+bounds:812,2,88,105
+offsets:1,1,91,107
+rotate:90
+Layer 9
+bounds:1400,146,95,108
+offsets:1,1,97,110
+Layer 9 copy
+bounds:1303,146,95,108
+offsets:1,1,97,110
+Layer 9 copy 2
+bounds:122,5,48,91
+offsets:1,1,50,93
+rotate:90
+Layer 9 copy 3
+bounds:1206,146,95,108
+offsets:1,1,97,110
+Leg
+bounds:1963,157,48,97
+offsets:1,1,50,99
+aos copy
+bounds:1327,54,90,97
+offsets:1,1,92,99
+rotate:90
+aos copy 2
+bounds:1779,157,90,97
+offsets:1,1,92,99
+aos copy 3
+bounds:1871,157,90,97
+offsets:1,1,92,99
+facce 1
+bounds:1010,92,194,162
+offsets:1,1,196,164
+facce 2
+bounds:812,92,196,162
+offsets:1,1,198,164
+facce 3
+bounds:611,87,199,167
+offsets:1,1,201,169
+leg (L)
+bounds:1206,92,52,119
+offsets:1,1,54,121
+rotate:90
+leg2
+bounds:2,3,50,118
+offsets:1,1,52,120
+rotate:90

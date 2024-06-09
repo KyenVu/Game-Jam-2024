@@ -7,6 +7,8 @@ public class Health : MonoBehaviour
 {
     [SerializeField] private float startingHealth;
     public float CurrentHealth { get; private set; }
+   // public GameObject drug;
+   // public GameObject medicine;
 
     [SerializeField] private Slider progressBar; // Reference to the UI slider
     [SerializeField] private float maxProgress = 100f; // Maximum value for the progress bar
@@ -40,12 +42,14 @@ public class Health : MonoBehaviour
         {
             TakeDamage(1.0f);
             Debug.Log(CurrentHealth);
+            //Destroy(drug);
         }
 
         if (collision.CompareTag("medicine"))
         {
             UpdateProgress(medicineProgressIncrease);
             Debug.Log("Progress: " + currentProgress);
+            //Destroy(medicine);
         }
     }
 

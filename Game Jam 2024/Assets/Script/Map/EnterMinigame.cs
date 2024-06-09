@@ -6,7 +6,7 @@ using UnityEngine.SceneManagement;
 public class EnterMinigame : MonoBehaviour
 {
     private bool playerInTrigger = false;
-
+    public int gameScene;
     private void OnTriggerEnter2D(Collider2D other)
     {
         if (other.CompareTag("Player"))
@@ -30,7 +30,7 @@ public class EnterMinigame : MonoBehaviour
         if (playerInTrigger && Input.GetKeyDown(KeyCode.E))
         {
             Debug.Log("Player pressed E");
-            SceneManager.LoadScene(9, LoadSceneMode.Single);
+            SceneManager.LoadScene(gameScene, LoadSceneMode.Single);
         }
     }
 }

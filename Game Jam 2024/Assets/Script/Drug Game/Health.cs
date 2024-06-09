@@ -2,11 +2,13 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI; // Import the UI namespace for using Slider
-
+using UnityEngine.SceneManagement;
 public class Health : MonoBehaviour
 {
     [SerializeField] private float startingHealth;
     public float CurrentHealth { get; private set; }
+   // public GameObject drug;
+   // public GameObject medicine;
 
     [SerializeField] private Slider progressBar; // Reference to the UI slider
     [SerializeField] private float maxProgress = 100f; // Maximum value for the progress bar
@@ -21,6 +23,7 @@ public class Health : MonoBehaviour
             progressBar.maxValue = maxProgress;
             progressBar.value = currentProgress;
         }
+       
     }
 
     public void TakeDamage(float damage)//receive damage and play animation
@@ -39,12 +42,14 @@ public class Health : MonoBehaviour
         {
             TakeDamage(1.0f);
             Debug.Log(CurrentHealth);
+            //Destroy(drug);
         }
 
         if (collision.CompareTag("medicine"))
         {
             UpdateProgress(medicineProgressIncrease);
             Debug.Log("Progress: " + currentProgress);
+            //Destroy(medicine);
         }
     }
 
@@ -60,13 +65,16 @@ public class Health : MonoBehaviour
         {
 
             Debug.Log("Progress bar is full!");
-       
+            SceneManager.LoadScene(5, LoadSceneMode.Single);
         }
     }
 
     // Update is called once per frame
     void Update()
     {
-
+        if(CurrentHealth <= 0)
+        {
+            SceneManager.LoadScene(1, LoadSceneMode.Single);
+        }
     }
 }

@@ -23,5 +23,5 @@ public class PlayerDrugMovement : MonoBehaviour
     {
         rb.velocity = position* speed;
     }
-    
+   
 }

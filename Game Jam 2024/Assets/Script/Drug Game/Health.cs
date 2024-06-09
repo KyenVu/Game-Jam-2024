@@ -58,9 +58,9 @@ public class Health : MonoBehaviour
 
         if (currentProgress >= maxProgress)
         {
-            // Handle full progress bar (e.g., level up, special ability, etc.)
+
             Debug.Log("Progress bar is full!");
-            // Add your custom logic here
+       
         }
     }
 
